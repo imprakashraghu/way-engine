@@ -1,4 +1,6 @@
-- id (required)
-- type (optional: "input" | "output" | custom)
-- position (optional: relative { x, y })
-- data (optional)
+- id: string
+- nodeId: string (the node this port belongs to)
+- type: "input" | "output" | "default"
+
+- position: { x, y } relative to node
+- data: custom payload

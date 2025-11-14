@@ -73,3 +73,75 @@ export function updateNode(existing: Node, patch: Partial<Omit<Node, 'id'>>) : N
 
     return updated;
 }
+
+/**
+ * Used to move a node to given x and y
+ * @param node {Node}
+ * @param newPosition {NodePosition} 
+ */
+export function moveNode(existing: Node, newPosition: NodePosition) : Node {
+    if (typeof newPosition.x !== "number" || typeof newPosition.y !== "number") {
+        throw new Error("moveNode: position must include numeric x and y.");
+    }
+
+    return {
+        ...existing,
+        position: {
+            x: newPosition.x,
+            y: newPosition.y,
+        },
+    };
+}
+
+/**
+ * Removes a node by ID
+ * This function does NOT remove it from the graph yet — 
+ * the Graph model will handle that.
+ * @param node {Node}
+ */
+export function removeNode(node: Node) : Node {
+    return node;
+}
+
+/**
+ * Adds port ID to a node
+ * @param node {Node}
+ * @param portId {string}
+ * @returns {Node}
+ */
+export function addPortToNode(node: Node, portId: string) : Node {
+    if (!portId) {
+        throw new Error("addPortToNode: portId is required.");
+    }
+
+    // Prevent duplicates
+    if (node.ports?.includes(portId)) {
+        return node; // no change
+    }
+
+    return {
+        ...node,
+        ports: [...(node.ports ?? []), portId],
+    };
+}
+
+/**
+ * Removes port ID from a node
+ * @param node {Node}
+ * @param portId {string}
+ * @returns {Node}
+ */
+export function removePortFromNode(node: Node, portId: string) : Node {
+    if (!portId) {
+        throw new Error("removePortFromNode: portId is required.");
+    }
+
+    if (!node.ports || !node.ports.includes(portId)) {
+        return node; // no change
+    }
+
+    return {
+        ...node,
+        ports: node.ports.filter(p => p !== portId),
+    };
+}
