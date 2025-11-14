@@ -1,0 +1,6 @@
+- id (required)
+- sourceNodeId (required)
+- sourcePortId (optional)
+- targetNodeId (required)
+- targetPortId (optional)
+- data (optional)

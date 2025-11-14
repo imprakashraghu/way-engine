@@ -1,0 +1,4 @@
+- id (required)
+- type (optional: "input" | "output" | custom)
+- position (optional: relative { x, y })
+- data (optional)

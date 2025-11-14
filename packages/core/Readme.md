@@ -1,0 +1,16 @@
+This package defines nodes with: id, position, type, data, ports.
+This package defines edges with: id, sourceNodeId, sourcePortId, targetNodeId, targetPortId, data.
+This package defines ports with: id, type, position, data.
+The graph model contains nodes, edges, and optional metadata.
+The event model defines notifications such as node:added, node:moved, edge:connected, and graph:changed.
+The selection model tracks selected nodes and edges and supports actions such as selectNode, selectNodes, and clearSelection.
+The command model defines actions such as addNode, moveNode, addEdge, and clearSelection, forming the basis of history and undo/redo.
+The history model tracks command snapshots and provides undo, redo, and clearHistory functionality.
+The serialization model defines how graphs, nodes, edges, and ports are saved to and loaded from JSON.
+The metadata model defines optional graph, node, and edge metadata such as version, timestamps, and custom fields.
+The viewport model tracks the pan (x, y) and zoom level of the diagram.
+The validation model ensures graph integrity by checking nodes, edges, ports, and references.
+The state model centralizes graph, selection, viewport, history, validation, and event subsystems into one unified engine state.
+The engine model exposes the public API, including graph operations, selection, commands, history, events, and serialization.
+The integration model defines how subsystems (graph, selection, viewport, history, validation, events) interact inside the state and engine.
+The lifecycle model defines engine phases such as init, load, update, reset, and destroy, along with related engine events.

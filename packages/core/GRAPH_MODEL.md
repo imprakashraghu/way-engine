@@ -1,0 +1,7 @@
+- nodes: list of node objects
+- edges: list of edge objects
+- metadata (optional):
+    - createdAt
+    - updatedAt
+    - version
+    - custom data
