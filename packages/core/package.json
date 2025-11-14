@@ -12,7 +12,8 @@
   "license": "ISC",
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
-    "graphology": "^0.26.0"
+    "graphology": "^0.26.0",
+    "nanoid": "^5.1.6"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
