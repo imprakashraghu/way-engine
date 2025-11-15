@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "core": ["../../core/dist/index.d.ts"]
+    },
+
+    "rootDir": "./",
+    "outDir": "dist"
+  },
+  "include": ["./**/*.ts"]
+}

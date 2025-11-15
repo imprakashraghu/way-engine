@@ -3,7 +3,7 @@
 import { Command } from "./CommandTypes";
 import { Graph } from "../graph/GraphTypes";
 import { addNode, updateNode, removeNode, addEdge, addPort } from "../graph/GraphManager";
-import { NodePosition } from "../Node";
+import { NodePosition } from "../node/NodeTypes";
 
 //
 // 1. AddNodeCommand

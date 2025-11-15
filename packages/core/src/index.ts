@@ -1,7 +1,19 @@
 // ------------------------------
 // GRAPH CORE
 // ------------------------------
-export * from "./graph/GraphManager";
+export {
+  createGraph,
+  addNode,
+  updateNode,
+  removeNode,
+  addPort,
+  updatePort,
+  removePort,
+  addEdge,
+  updateEdge,
+  removeEdge,
+  rewireEdge
+} from "./graph/GraphManager";
 export * from "./graph/GraphTypes";
 
 

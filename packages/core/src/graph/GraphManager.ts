@@ -29,7 +29,7 @@
 import { Graph } from "./GraphTypes";
 import { Node } from "../node/NodeTypes";
 import { updateNode as updateNodeOnly } from "../node/NodeManager";
-import { Port } from "../Port";
+import { Port } from "../port/PortTypes";
 import { updatePort as updatePortOnly } from "../port/PortManager";
 import { Edge } from "../edge/EdgeTypes";
 import { updateEdge as updateEdgeOnly } from "../edge/EdgeManager";
